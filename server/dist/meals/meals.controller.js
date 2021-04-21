@@ -25,10 +25,10 @@ let MealsController = class MealsController {
         return this.mealsService.create(createMealDto);
     }
     findAll() {
-        return this.mealsService.findAll();
+        return this.mealsService.getMeals();
     }
     findOne(id) {
-        return this.mealsService.findOne(+id);
+        return this.mealsService.findOne(id);
     }
     update(id, updateMealDto) {
         return this.mealsService.update(+id, updateMealDto);
@@ -42,20 +42,20 @@ __decorate([
     __param(0, common_1.Body()),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", [create_meal_dto_1.CreateMealDto]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], MealsController.prototype, "create", null);
 __decorate([
     common_1.Get(),
     __metadata("design:type", Function),
     __metadata("design:paramtypes", []),
-    __metadata("design:returntype", void 0)
+    __metadata("design:returntype", Promise)
 ], MealsController.prototype, "findAll", null);
 __decorate([
     common_1.Get(':id'),
-    __param(0, common_1.Param('id')),
+    __param(0, common_1.Param('id', common_1.ParseIntPipe)),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:paramtypes", [Number]),
+    __metadata("design:returntype", Promise)
 ], MealsController.prototype, "findOne", null);
 __decorate([
     common_1.Patch(':id'),

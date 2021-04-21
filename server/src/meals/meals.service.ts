@@ -16,12 +16,12 @@ export class MealsService {
     return this.mealRepository.createMeal(createMealDto);
   }
 
-  findAll() {
-    return `This action returns all meals`;
+  getMeals(): Promise<Meal[]> {
+    return this.mealRepository.getMeals();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} meal`;
+  findOne(id: number): Promise<Meal> {
+    return this.mealRepository.getMealById(id);
   }
 
   update(id: number, updateMealDto: UpdateMealDto) {

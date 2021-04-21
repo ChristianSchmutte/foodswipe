@@ -6,8 +6,8 @@ export declare class MealsService {
     private mealRepository;
     constructor(mealRepository: MealRepository);
     create(createMealDto: CreateMealDto): Promise<Meal>;
-    findAll(): string;
-    findOne(id: number): string;
+    getMeals(): Promise<Meal[]>;
+    findOne(id: number): Promise<Meal>;
     update(id: number, updateMealDto: UpdateMealDto): string;
     remove(id: number): string;
 }

@@ -25,6 +25,16 @@ let MealRepository = class MealRepository extends typeorm_1.Repository {
             throw new common_1.InternalServerErrorException('Internal Server Error');
         }
     }
+    async getMeals() {
+        const meals = await meal_entity_1.Meal.find();
+        return meals;
+    }
+    async getMealById(id) {
+        const meal = await meal_entity_1.Meal.findOne({ id });
+        if (!meal)
+            throw new common_1.NotFoundException(`Could not find meal with id:${id}`);
+        return meal;
+    }
 };
 MealRepository = __decorate([
     typeorm_1.EntityRepository(meal_entity_1.Meal)

@@ -3562,18 +3562,18 @@
         "affectsGlobalScope": false
       },
       "../src/meals/meal-repository.ts": {
-        "version": "693329e454a21ad97e2bec84cb72bf680690e5192fb71c80adf9e2bcc9fb10a6",
-        "signature": "03f49da7262a9943e60d584eeeec9080947a27d55d2168b13a8c0f8abd140d82",
+        "version": "34cb688e3e3ea784bc14583cd5de6fad3ec90f5b6910eef8a0aabef0bfdab0c4",
+        "signature": "1e3cefe4e0b9e4eef51eede8f6528aedab9156dd9df7d096d795f87642cdbc45",
         "affectsGlobalScope": false
       },
       "../src/meals/meals.service.ts": {
-        "version": "12ee2fdb5846a475acaa56a809d935f40a5cc9d382d3ba9469ae70825b25eb91",
-        "signature": "13a83d7d987701011c1c8a5e32d1a736b8178d77a5e09e1acf68b8f986c8407a",
+        "version": "15a6bc32eb8d380218996c979ef09f810c1291de7d39d3f595cfcd19fa963d93",
+        "signature": "da19d4f033f766f4240a27ea634f6b31d16e31e8098f7656b8212fdb3978bc7b",
         "affectsGlobalScope": false
       },
       "../src/meals/meals.controller.ts": {
-        "version": "c0b90053aaa20a2263390f6243a8e1d80245e80a2ea3f5b7b267befcd1684cbc",
-        "signature": "8a1e0ab2e0655850d4f76d49ec404eaf08e6decb27be273fb91995fd7304db9c",
+        "version": "e4facd6c539237f3d8e3498fb08354031f211ab2d069e3d1a07c54cf9772cbdb",
+        "signature": "c3a680de069772aed7d0f0d3a859cd082e610bfb908b1ed620ecd42f17e31aa2",
         "affectsGlobalScope": false
       },
       "../src/meals/meals.module.ts": {
@@ -7320,6 +7320,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/meals/dto/create-meal.dto.ts",
         "../src/meals/dto/update-meal.dto.ts",
+        "../src/meals/entities/meal.entity.ts",
         "../src/meals/meals.service.ts"
       ],
       "../src/meals/meals.module.ts": [
