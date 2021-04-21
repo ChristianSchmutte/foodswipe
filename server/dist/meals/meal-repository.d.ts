@@ -7,4 +7,5 @@ export declare class MealRepository extends Repository<Meal> {
     getMeals(): Promise<Meal[]>;
     getMealById(id: number): Promise<Meal>;
     updateMeal(id: number, updateMealDto: UpdateMealDto): Promise<Meal>;
+    deleteMeal(id: number): Promise<void>;
 }

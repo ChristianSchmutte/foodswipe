@@ -9,5 +9,5 @@ export declare class MealsController {
     findAll(): Promise<Meal[]>;
     findOne(id: number): Promise<Meal>;
     update(id: number, updateMealDto: UpdateMealDto): Promise<Meal>;
-    remove(id: string): string;
+    remove(id: number): Promise<void>;
 }

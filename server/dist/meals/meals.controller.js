@@ -34,7 +34,7 @@ let MealsController = class MealsController {
         return this.mealsService.updateMeal(id, updateMealDto);
     }
     remove(id) {
-        return this.mealsService.remove(+id);
+        return this.mealsService.deleteMeal(id);
     }
 };
 __decorate([
@@ -67,9 +67,9 @@ __decorate([
 ], MealsController.prototype, "update", null);
 __decorate([
     common_1.Delete(':id'),
-    __param(0, common_1.Param('id')),
+    __param(0, common_1.Param('id', common_1.ParseIntPipe)),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String]),
+    __metadata("design:paramtypes", [Number]),
     __metadata("design:returntype", void 0)
 ], MealsController.prototype, "remove", null);
 MealsController = __decorate([

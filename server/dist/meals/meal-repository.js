@@ -59,6 +59,12 @@ let MealRepository = class MealRepository extends typeorm_1.Repository {
             throw new common_1.InternalServerErrorException('Internal Server Error');
         }
     }
+    async deleteMeal(id) {
+        const { affected } = await meal_entity_1.Meal.delete({ id });
+        if (affected === 0) {
+            throw new common_1.NotFoundException(`Could not find user with id ${id}`);
+        }
+    }
 };
 MealRepository = __decorate([
     typeorm_1.EntityRepository(meal_entity_1.Meal)

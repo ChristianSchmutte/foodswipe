@@ -9,5 +9,5 @@ export declare class MealsService {
     getMeals(): Promise<Meal[]>;
     findOne(id: number): Promise<Meal>;
     updateMeal(id: number, updateMealDto: UpdateMealDto): Promise<Meal>;
-    remove(id: number): string;
+    deleteMeal(id: number): Promise<void>;
 }

@@ -32,8 +32,8 @@ let MealsService = class MealsService {
     updateMeal(id, updateMealDto) {
         return this.mealRepository.updateMeal(id, updateMealDto);
     }
-    remove(id) {
-        return `This action removes a #${id} meal`;
+    deleteMeal(id) {
+        return this.mealRepository.deleteMeal(id);
     }
 };
 MealsService = __decorate([

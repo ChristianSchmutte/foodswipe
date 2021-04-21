@@ -9,33 +9,37 @@ var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.Meal = void 0;
-const restaurant_entity_1 = require("../../restaurants/entities/restaurant.entity");
+exports.Restaurant = void 0;
+const meal_entity_1 = require("../../meals/entities/meal.entity");
 const typeorm_1 = require("typeorm");
-let Meal = class Meal extends typeorm_1.BaseEntity {
+let Restaurant = class Restaurant extends typeorm_1.BaseEntity {
 };
 __decorate([
     typeorm_1.PrimaryGeneratedColumn(),
     __metadata("design:type", Number)
-], Meal.prototype, "id", void 0);
+], Restaurant.prototype, "id", void 0);
 __decorate([
     typeorm_1.Column(),
     __metadata("design:type", String)
-], Meal.prototype, "name", void 0);
+], Restaurant.prototype, "email", void 0);
 __decorate([
     typeorm_1.Column(),
     __metadata("design:type", String)
-], Meal.prototype, "description", void 0);
+], Restaurant.prototype, "name", void 0);
+__decorate([
+    typeorm_1.Column(),
+    __metadata("design:type", String)
+], Restaurant.prototype, "password", void 0);
 __decorate([
     typeorm_1.Column({ type: 'float' }),
     __metadata("design:type", Number)
-], Meal.prototype, "price", void 0);
+], Restaurant.prototype, "latitude", void 0);
 __decorate([
-    typeorm_1.Column(),
-    __metadata("design:type", String)
-], Meal.prototype, "image_url", void 0);
-Meal = __decorate([
+    typeorm_1.Column({ type: 'float' }),
+    __metadata("design:type", Number)
+], Restaurant.prototype, "longitude", void 0);
+Restaurant = __decorate([
     typeorm_1.Entity()
-], Meal);
-exports.Meal = Meal;
-//# sourceMappingURL=meal.entity.js.map
+], Restaurant);
+exports.Restaurant = Restaurant;
+//# sourceMappingURL=restaurant.entity.js.map

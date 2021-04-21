@@ -13,13 +13,15 @@ const meals_controller_1 = require("./meals.controller");
 const typeorm_1 = require("@nestjs/typeorm");
 const meal_entity_1 = require("./entities/meal.entity");
 const meal_repository_1 = require("./meal-repository");
+const restaurants_module_1 = require("../restaurants/restaurants.module");
 let MealsModule = class MealsModule {
 };
 MealsModule = __decorate([
     common_1.Module({
-        imports: [typeorm_1.TypeOrmModule.forFeature([meal_entity_1.Meal])],
+        imports: [typeorm_1.TypeOrmModule.forFeature([meal_entity_1.Meal]), restaurants_module_1.RestaurantsModule],
         controllers: [meals_controller_1.MealsController],
         providers: [meals_service_1.MealsService, meal_repository_1.MealRepository],
+        exports: [meals_service_1.MealsService],
     })
 ], MealsModule);
 exports.MealsModule = MealsModule;
