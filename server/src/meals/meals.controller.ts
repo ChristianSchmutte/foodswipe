@@ -42,7 +42,7 @@ export class MealsController {
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.mealsService.remove(+id);
+  remove(@Param('id', ParseIntPipe) id: number) {
+    return this.mealsService.deleteMeal(id);
   }
 }

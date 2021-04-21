@@ -28,7 +28,7 @@ export class MealsService {
     return this.mealRepository.updateMeal(id, updateMealDto);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} meal`;
+  deleteMeal(id: number) {
+    return this.mealRepository.deleteMeal(id);
   }
 }

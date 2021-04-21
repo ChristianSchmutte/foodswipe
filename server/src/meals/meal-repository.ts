@@ -70,4 +70,11 @@ export class MealRepository extends Repository<Meal> {
       throw new InternalServerErrorException('Internal Server Error');
     }
   }
+  async deleteMeal(id: number): Promise<void> {
+    const { affected } = await Meal.delete({ id });
+
+    if (affected === 0) {
+      throw new NotFoundException(`Could not find user with id ${id}`);
+    }
+  }
 }
