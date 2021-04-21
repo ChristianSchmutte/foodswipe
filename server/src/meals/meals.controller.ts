@@ -6,37 +6,43 @@ import {
   Patch,
   Param,
   Delete,
+  ParseIntPipe,
+  ValidationPipe,
 } from '@nestjs/common';
 import { MealsService } from './meals.service';
 import { CreateMealDto } from './dto/create-meal.dto';
 import { UpdateMealDto } from './dto/update-meal.dto';
+import { Meal } from './entities/meal.entity';
 
 @Controller('meals')
 export class MealsController {
   constructor(private readonly mealsService: MealsService) {}
 
   @Post()
-  create(@Body() createMealDto: CreateMealDto) {
+  create(@Body() createMealDto: CreateMealDto): Promise<Meal> {
     return this.mealsService.create(createMealDto);
   }
 
   @Get()
-  findAll() {
-    return this.mealsService.findAll();
+  findAll(): Promise<Meal[]> {
+    return this.mealsService.getMeals();
   }
 
   @Get(':id')
-  findOne(@Param('id') id: string) {
-    return this.mealsService.findOne(+id);
+  findOne(@Param('id', ParseIntPipe) id: number): Promise<Meal> {
+    return this.mealsService.findOne(id);
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateMealDto: UpdateMealDto) {
-    return this.mealsService.update(+id, updateMealDto);
+  update(
+    @Param('id', ParseIntPipe) id: number,
+    @Body(ValidationPipe) updateMealDto: UpdateMealDto,
+  ): Promise<Meal> {
+    return this.mealsService.updateMeal(id, updateMealDto);
   }
 
   @Delete(':id')
-  remove(@Param('id') id: string) {
-    return this.mealsService.remove(+id);
+  remove(@Param('id', ParseIntPipe) id: number) {
+    return this.mealsService.deleteMeal(id);
   }
 }

@@ -16,19 +16,19 @@ export class MealsService {
     return this.mealRepository.createMeal(createMealDto);
   }
 
-  findAll() {
-    return `This action returns all meals`;
+  getMeals(): Promise<Meal[]> {
+    return this.mealRepository.getMeals();
   }
 
-  findOne(id: number) {
-    return `This action returns a #${id} meal`;
+  findOne(id: number): Promise<Meal> {
+    return this.mealRepository.getMealById(id);
   }
 
-  update(id: number, updateMealDto: UpdateMealDto) {
-    return `This action updates a #${id} meal`;
+  updateMeal(id: number, updateMealDto: UpdateMealDto): Promise<Meal> {
+    return this.mealRepository.updateMeal(id, updateMealDto);
   }
 
-  remove(id: number) {
-    return `This action removes a #${id} meal`;
+  deleteMeal(id: number) {
+    return this.mealRepository.deleteMeal(id);
   }
 }

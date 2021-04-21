@@ -23,14 +23,14 @@ let MealsService = class MealsService {
     create(createMealDto) {
         return this.mealRepository.createMeal(createMealDto);
     }
-    findAll() {
-        return `This action returns all meals`;
+    getMeals() {
+        return this.mealRepository.getMeals();
     }
     findOne(id) {
-        return `This action returns a #${id} meal`;
+        return this.mealRepository.getMealById(id);
     }
-    update(id, updateMealDto) {
-        return `This action updates a #${id} meal`;
+    updateMeal(id, updateMealDto) {
+        return this.mealRepository.updateMeal(id, updateMealDto);
     }
     remove(id) {
         return `This action removes a #${id} meal`;

@@ -3562,18 +3562,18 @@
         "affectsGlobalScope": false
       },
       "../src/meals/meal-repository.ts": {
-        "version": "693329e454a21ad97e2bec84cb72bf680690e5192fb71c80adf9e2bcc9fb10a6",
-        "signature": "03f49da7262a9943e60d584eeeec9080947a27d55d2168b13a8c0f8abd140d82",
+        "version": "6727e02882d4a4a299844b4b39740268216248c43d84ca856f4d7db743e7db10",
+        "signature": "ecf904fd48efa2638c87d9b529c2c637524ed2cac704f558a486751f395f4dee",
         "affectsGlobalScope": false
       },
       "../src/meals/meals.service.ts": {
-        "version": "12ee2fdb5846a475acaa56a809d935f40a5cc9d382d3ba9469ae70825b25eb91",
-        "signature": "13a83d7d987701011c1c8a5e32d1a736b8178d77a5e09e1acf68b8f986c8407a",
+        "version": "1449f73531a421cad1e84d9390b5a2935fab4d5eecdd1d1b3de54196fe3e476e",
+        "signature": "cb8e41e63eebaa121e495decbf59ca2fad86319699d52c98ed65c6eaa1e06db5",
         "affectsGlobalScope": false
       },
       "../src/meals/meals.controller.ts": {
-        "version": "c0b90053aaa20a2263390f6243a8e1d80245e80a2ea3f5b7b267befcd1684cbc",
-        "signature": "8a1e0ab2e0655850d4f76d49ec404eaf08e6decb27be273fb91995fd7304db9c",
+        "version": "fddbbed2d528a81f188a6a9133c22845e4a8055d23def6c7cbfccc10b44afd96",
+        "signature": "52bf1ea123137e1148baf42c1a491aaba8a7bd38b00b4605a6d7d7ffa086942f",
         "affectsGlobalScope": false
       },
       "../src/meals/meals.module.ts": {
@@ -7314,12 +7314,14 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
         "../src/meals/dto/create-meal.dto.ts",
+        "../src/meals/dto/update-meal.dto.ts",
         "../src/meals/entities/meal.entity.ts"
       ],
       "../src/meals/meals.controller.ts": [
         "../node_modules/@nestjs/common/index.d.ts",
         "../src/meals/dto/create-meal.dto.ts",
         "../src/meals/dto/update-meal.dto.ts",
+        "../src/meals/entities/meal.entity.ts",
         "../src/meals/meals.service.ts"
       ],
       "../src/meals/meals.module.ts": [
@@ -10403,6 +10405,7 @@
       "../src/meals/meal-repository.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/meals/dto/create-meal.dto.ts",
+        "../src/meals/dto/update-meal.dto.ts",
         "../src/meals/entities/meal.entity.ts"
       ],
       "../src/meals/meals.controller.ts": [
