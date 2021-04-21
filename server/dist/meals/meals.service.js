@@ -29,8 +29,8 @@ let MealsService = class MealsService {
     findOne(id) {
         return this.mealRepository.getMealById(id);
     }
-    update(id, updateMealDto) {
-        return `This action updates a #${id} meal`;
+    updateMeal(id, updateMealDto) {
+        return this.mealRepository.updateMeal(id, updateMealDto);
     }
     remove(id) {
         return `This action removes a #${id} meal`;

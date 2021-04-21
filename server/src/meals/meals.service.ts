@@ -24,8 +24,8 @@ export class MealsService {
     return this.mealRepository.getMealById(id);
   }
 
-  update(id: number, updateMealDto: UpdateMealDto) {
-    return `This action updates a #${id} meal`;
+  updateMeal(id: number, updateMealDto: UpdateMealDto): Promise<Meal> {
+    return this.mealRepository.updateMeal(id, updateMealDto);
   }
 
   remove(id: number) {

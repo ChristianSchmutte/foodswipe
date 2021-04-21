@@ -8,6 +8,6 @@ export declare class MealsService {
     create(createMealDto: CreateMealDto): Promise<Meal>;
     getMeals(): Promise<Meal[]>;
     findOne(id: number): Promise<Meal>;
-    update(id: number, updateMealDto: UpdateMealDto): string;
+    updateMeal(id: number, updateMealDto: UpdateMealDto): Promise<Meal>;
     remove(id: number): string;
 }

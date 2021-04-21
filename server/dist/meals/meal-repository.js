@@ -35,6 +35,30 @@ let MealRepository = class MealRepository extends typeorm_1.Repository {
             throw new common_1.NotFoundException(`Could not find meal with id:${id}`);
         return meal;
     }
+    async updateMeal(id, updateMealDto) {
+        const updatedMeal = await meal_entity_1.Meal.findOne({ id });
+        if (!updatedMeal)
+            throw new common_1.NotFoundException();
+        updatedMeal.name = updateMealDto.name
+            ? updateMealDto.name
+            : updatedMeal.name;
+        updatedMeal.description = updateMealDto.description
+            ? updateMealDto.description
+            : updatedMeal.description;
+        updatedMeal.price = updateMealDto.price
+            ? updateMealDto.price
+            : updatedMeal.price;
+        updatedMeal.image_url = updateMealDto.image_url
+            ? updateMealDto.image_url
+            : updatedMeal.image_url;
+        try {
+            await updatedMeal.save();
+            return updatedMeal;
+        }
+        catch (error) {
+            throw new common_1.InternalServerErrorException('Internal Server Error');
+        }
+    }
 };
 MealRepository = __decorate([
     typeorm_1.EntityRepository(meal_entity_1.Meal)

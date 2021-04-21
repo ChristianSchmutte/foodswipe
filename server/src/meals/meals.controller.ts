@@ -7,6 +7,7 @@ import {
   Param,
   Delete,
   ParseIntPipe,
+  ValidationPipe,
 } from '@nestjs/common';
 import { MealsService } from './meals.service';
 import { CreateMealDto } from './dto/create-meal.dto';
@@ -33,8 +34,11 @@ export class MealsController {
   }
 
   @Patch(':id')
-  update(@Param('id') id: string, @Body() updateMealDto: UpdateMealDto) {
-    return this.mealsService.update(+id, updateMealDto);
+  update(
+    @Param('id', ParseIntPipe) id: number,
+    @Body(ValidationPipe) updateMealDto: UpdateMealDto,
+  ): Promise<Meal> {
+    return this.mealsService.updateMeal(id, updateMealDto);
   }
 
   @Delete(':id')

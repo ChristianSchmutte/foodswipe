@@ -3562,18 +3562,18 @@
         "affectsGlobalScope": false
       },
       "../src/meals/meal-repository.ts": {
-        "version": "34cb688e3e3ea784bc14583cd5de6fad3ec90f5b6910eef8a0aabef0bfdab0c4",
-        "signature": "1e3cefe4e0b9e4eef51eede8f6528aedab9156dd9df7d096d795f87642cdbc45",
+        "version": "6727e02882d4a4a299844b4b39740268216248c43d84ca856f4d7db743e7db10",
+        "signature": "ecf904fd48efa2638c87d9b529c2c637524ed2cac704f558a486751f395f4dee",
         "affectsGlobalScope": false
       },
       "../src/meals/meals.service.ts": {
-        "version": "15a6bc32eb8d380218996c979ef09f810c1291de7d39d3f595cfcd19fa963d93",
-        "signature": "da19d4f033f766f4240a27ea634f6b31d16e31e8098f7656b8212fdb3978bc7b",
+        "version": "1449f73531a421cad1e84d9390b5a2935fab4d5eecdd1d1b3de54196fe3e476e",
+        "signature": "cb8e41e63eebaa121e495decbf59ca2fad86319699d52c98ed65c6eaa1e06db5",
         "affectsGlobalScope": false
       },
       "../src/meals/meals.controller.ts": {
-        "version": "e4facd6c539237f3d8e3498fb08354031f211ab2d069e3d1a07c54cf9772cbdb",
-        "signature": "c3a680de069772aed7d0f0d3a859cd082e610bfb908b1ed620ecd42f17e31aa2",
+        "version": "fddbbed2d528a81f188a6a9133c22845e4a8055d23def6c7cbfccc10b44afd96",
+        "signature": "52bf1ea123137e1148baf42c1a491aaba8a7bd38b00b4605a6d7d7ffa086942f",
         "affectsGlobalScope": false
       },
       "../src/meals/meals.module.ts": {
@@ -7314,6 +7314,7 @@
         "../node_modules/@nestjs/common/index.d.ts",
         "../node_modules/typeorm/index.d.ts",
         "../src/meals/dto/create-meal.dto.ts",
+        "../src/meals/dto/update-meal.dto.ts",
         "../src/meals/entities/meal.entity.ts"
       ],
       "../src/meals/meals.controller.ts": [
@@ -10404,6 +10405,7 @@
       "../src/meals/meal-repository.ts": [
         "../node_modules/typeorm/index.d.ts",
         "../src/meals/dto/create-meal.dto.ts",
+        "../src/meals/dto/update-meal.dto.ts",
         "../src/meals/entities/meal.entity.ts"
       ],
       "../src/meals/meals.controller.ts": [

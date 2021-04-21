@@ -31,7 +31,7 @@ let MealsController = class MealsController {
         return this.mealsService.findOne(id);
     }
     update(id, updateMealDto) {
-        return this.mealsService.update(+id, updateMealDto);
+        return this.mealsService.updateMeal(id, updateMealDto);
     }
     remove(id) {
         return this.mealsService.remove(+id);
@@ -59,10 +59,11 @@ __decorate([
 ], MealsController.prototype, "findOne", null);
 __decorate([
     common_1.Patch(':id'),
-    __param(0, common_1.Param('id')), __param(1, common_1.Body()),
+    __param(0, common_1.Param('id', common_1.ParseIntPipe)),
+    __param(1, common_1.Body(common_1.ValidationPipe)),
     __metadata("design:type", Function),
-    __metadata("design:paramtypes", [String, update_meal_dto_1.UpdateMealDto]),
-    __metadata("design:returntype", void 0)
+    __metadata("design:paramtypes", [Number, update_meal_dto_1.UpdateMealDto]),
+    __metadata("design:returntype", Promise)
 ], MealsController.prototype, "update", null);
 __decorate([
     common_1.Delete(':id'),
