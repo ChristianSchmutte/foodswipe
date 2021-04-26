@@ -4,3 +4,6 @@
 [submodule "foodswipe-backend"]
 	path = foodswipe-backend
 	url = https://github.com/ChristianSchmutte/foodswipe-backend
+[submodule "foodswipe-frontend"]
+	path = foodswipe-frontend
+	url = https://github.com/ChristianSchmutte/foodswipe-frontend
